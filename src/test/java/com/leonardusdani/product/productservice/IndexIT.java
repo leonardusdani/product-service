@@ -28,6 +28,12 @@ public class IndexIT {
     public void visitIndexPage() throws Exception {
 
         webDriver.get(String.format("http://localhost:%d/", serverPort));
+        try {
+        	Thread.sleep(5000000);
+        }catch (Exception e) {
+        	System.out.println(e.getMessage());
+			// TODO: handle exception
+		}
         //WebElement working = webDriver.findElement(By.id("working"));
 
         Assert.assertThat("It works!", is(equalTo("It works!")));
