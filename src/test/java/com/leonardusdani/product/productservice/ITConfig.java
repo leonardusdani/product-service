@@ -39,10 +39,10 @@ public class ITConfig {
 
     private URL getRemoteUrl() throws MalformedURLException {
         if (useSauceLabs()) {
-            return new URL(String.format("http://%s:%s@localhost:4445/wd/hub",
+            return new URL(String.format("http://%s:%s@ondemand.saucelabs.com:80/wd/hub",
                     env.getProperty("SAUCE_USERNAME"), env.getProperty("SAUCE_ACCESS_KEY")));
         } else {
-            return new URL("http://localhost:4445/wd/hub");
+            return new URL("http://ondemand.saucelabs.com:80/wd/hub");
         }
     }
 }
