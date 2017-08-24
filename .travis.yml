@@ -1,5 +1,12 @@
 language: java
 jdk:
  - oraclejdk8
-install: true
-script: mvn clean install
+
+addons:
+  sauce_connect:
+    username: leonardusdani
+  jwt:
+    secure: JuaFZx6bZZQ/2KtFLa4GaQat/FO5KFM9u7eIgjz6FmMSsTAoU9WW5L/n029DOGMIruV2uLUkByx2mcJxtv2dvZ0c7UwsQ7AAWVZJvZJEzf/InMK3sknSptDWgtLlLtswkGgA3eo61KJq9hV5LXd+B7El5uKTuPHBN/4S1iNe40P7hhmU754gFZLreTnKm9Emc2q5SKFE/dQGgUQqQpitoUUgj8ZVqm3ykgYQncnLf3CR7XtNLtR5Cd7DF302VHNSjUNGW4fGi3xkrFhV42D5UmNWHzrDPPJYXQIhmMPcsSKzH2yupJ/3rK1vQbOIRz3rNAKZVLhRTEGHNxmEtZy3FomHjBRRUQAIa5lgKcBWRxU/DfgGvXiz1PZnbEk9XO5SxjWfQ+c0g6osDlhXXDcPWbp+GRCJ2Fv2DX/ruKWP7C1vqSnII+SoFTb9AaJHCs0xSv60WJgz2chWnYdF65/j2xftIvxhOGiqgROLILv/trxicXC9tDsw/iZPpoxRxlXp5gEtlwbHJZR8Q4aRxW5zrCAzwdXuwsF6nDPAlCnlgVBdxZpLuMMsKxNL1aC31yo/7fAM0bFChE7EEgYtCTD/lCOTKKjIscE99vwrO2a1l5HxeIQpSh7iz4/mH5LYwlSX9HaCfsEzkyPuso6sqSQmDKxm5mDbp1vWUKQpgFy/rh8=
+    
+script: 
+    mvn verify -B
