@@ -1,4 +1,4 @@
-package com.leonardusdani.product.configuration;
+package com.leonardusdani.product.productservice;
 
 import java.net.MalformedURLException;
 import java.net.URL;
