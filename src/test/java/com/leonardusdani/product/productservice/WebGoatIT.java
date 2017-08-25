@@ -19,6 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.net.URL;
 import java.util.LinkedList;
@@ -33,7 +34,7 @@ import static org.junit.Assert.assertTrue;
  * Created by Doug Morato <dm@corp.io> on 8/21/15.
  *
  */
-@RunWith(ConcurrentParameterized.class)
+@RunWith(SpringJUnit4ClassRunner.class)
 public class WebGoatIT implements SauceOnDemandSessionIdProvider {
 
     // Since most Tomcat deployments run on port 8080, let's set the automated integration tests to
