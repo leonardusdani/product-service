@@ -35,6 +35,8 @@ public class IndexIT {
 			// TODO: handle exception
 		}
         //WebElement working = webDriver.findElement(By.id("working"));
+        webDriver.get("https://saucelabs.com/test/guinea-pig");
+        System.out.println("title of page is: " + webDriver.getTitle());
 
         Assert.assertThat("It works!", is(equalTo("It works!")));
     }
